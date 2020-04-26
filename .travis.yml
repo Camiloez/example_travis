@@ -4,4 +4,6 @@ python:
 install:
   - pip install -e .
 script:
-  - pytest tests
+  - pytest --cov=src tests
+after_succes:
+  - codecov
